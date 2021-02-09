@@ -1,59 +1,103 @@
-let yourName = prompt('what your name?');
-alert(`welcome ${yourName} in my page`);
+
+'use strict';
+let score = 0;
 
 
-
-let favMovie = 'hoydat';
-let favMovie = prompt('what is your fav character?');
-
-
-if(favMovie.toLowerCase() === myCharacter){
-  alert('that funy');
-}else {
-  alert('okay');
-}
-console.log(favMovie.toUpperCase()); 
-console.log(favMovie);
-
-
-let yourName = prompt('does your name consist of more than four letters?');
-if (yourName  ==='yes' || yourName  ==='y'){
+let yourName = prompt('do my name consist of more than four letters?');
+if (yourName.toLowerCase()  ==='yes' || yourName.toLowerCase()  ==='y'){
 alert('wow same to me')
-} else if(yourName  ==='no' || yourName ==='n'){
+score++;
+} else if(yourName.toLowerCase()  ==='no' || yourName.toLowerCase() ==='n'){
   alert('you are different to me')
+}else{
+  alert('thanks')
 }
 console.log(yourName);
 
-let youHungry = prompt('Are you hungry?');
-if (youHungry ==='yes' || youHungry ==='y'){
-alert('go to eat')
-} else if(youHungry ==='no' || youHungry ==='n'){
-  alert('go to drink')
+let youHungry = prompt('how old am I?');
+if (youHungry.toLowerCase() ==='yes' || youHungry.toLowerCase() ==='y'){
+alert('right')
+score++;
+} else if(youHungry.toLowerCase() ==='no' || youHungry.toLowerCase() ==='n'){
+  alert('wrong')
+}else{
+  alert('thanks');
 }
 console.log(youHungry );
 
-let Movie = prompt('have you ever watch movie?');
-if (Movie ==='yes' || Movie ==='y'){
-alert('thats exciting')
-} else if(Movie ==='no' || Movie ==='n'){
-  alert('you are boring')
-}
+let Movie = prompt('have I ever watch movie?');
+if (Movie.toLowerCase() ==='yes' || Movie.toLowerCase() ==='y'){
+alert('right')
+score++;
+} else if(Movie.toLowerCase() ==='no' || Movie.toLowerCase() ==='n'){
+  alert('wrong')
+}else('thanks')
 console.log(Movie);
 
-let tired = prompt('are you tired?');
-if (tired ==='yes' || tired ==='y'){
-alert('take a brake')
-} else if(tired ==='no' || tired ==='n'){
-  alert('complete your work')
+let tired = prompt('am I tired?');
+if (tired.toLowerCase() ==='yes' || tired.toLowerCase() ==='y'){
+alert('right')
+score++;
+} else if(tired.toLowerCase() ==='no' || tired.toLowerCase() ==='n'){
+  alert('wrong')
+}else{
+  alert('thanks')
 }
 console.log(tired);
 
-let traval = prompt('have you ever traval?');
-if (traval ==='yes' || traval ==='y'){
-alert('thats great')
-} else if(traval ==='no' || traval ==='n'){
-  alert('no problem')
+let traval = prompt('have I ever traval?');
+if (traval.toLowerCase() ==='yes' || traval.toLowerCase() ==='y'){
+alert('thats right')
+score++;
+} else if(traval.toLowerCase() ==='no' || traval.toLowerCase() ==='n'){
+  alert('thats wrong')
+}else{
+  alert('thanks')
 }
 console.log(traval);
 
+
+
+
+let favNum = 2;
+for(let i= 0; i<=4; i++){
+    let guess = prompt('what my faverate number?');
+
+    if(parseInt(guess) === favNum){
+        alert('thats right')
+        score++;
+        break;
+    }else if(parseInt(guess) < favNum){
+        alert('too low')
+    }else if(parseInt(guess) > favNum) {
+        alert('too high')
+    }else{
+        alert('good luck')
+    }
+    console.log(guess);
+}
+
+let prands = ['gucci', 'zara','chanel','coach','Christian Dior']
+let found = false;
+for(let x=0; x<6; x++){
+    let favPrand = prompt('what is my favourite prand');
+     for(let y=0; y<5; y++){
+        if(favPrand.toLowerCase() === prand[y]){
+            alert('thats right');
+            console.log(favPrand);
+            found = true;
+            score++;
+            break;
+        }
+        }
+        if(found === true){
+            break;
+         }
+}
+let yourName = prompt('what your name?');
+alert(`welcome ${yourName} in my page`);
+
 alert(yourName);
+
+document.write(prand);
+alert(`your scores ${score}`);
