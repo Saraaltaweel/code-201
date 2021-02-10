@@ -76,6 +76,7 @@ for(let i= 0; i<=4; i++){
     }
     console.log(guess);
 }
+alert(favNum)
 
 let prands = ['gucci', 'zara','chanel','coach','Christian Dior']
 let found = false;
