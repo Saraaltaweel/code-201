@@ -9,12 +9,12 @@ function aboutme() {
     score++;
   } else if (yourName.toLowerCase() === 'no' || yourName.toLowerCase() === 'n') {
     alert('you are different to me')
-  } else {
-    alert('thanks')
+  } 
+    else{ alart('thanks');
   }
   console.log(yourName);
 }
-aboutme();
+// aboutme();
 
 function age() {
 
@@ -30,7 +30,7 @@ function age() {
   console.log(youHungry);
 }
 
-age();
+// age();
 
 function movie() {
   let Movie = prompt('have I ever watch movie?');
@@ -39,11 +39,11 @@ function movie() {
     score++;
   } else if (Movie.toLowerCase() === 'no' || Movie.toLowerCase() === 'n') {
     alert('wrong')
-  } else ('thanks')
+  } else{ alart('thanks');}
   console.log(Movie);
 
 }
-movie();
+// movie();
 
 function tired() {
   let tired = prompt('am I tired?');
@@ -53,11 +53,11 @@ function tired() {
   } else if (tired.toLowerCase() === 'no' || tired.toLowerCase() === 'n') {
     alert('wrong')
   } else {
-    alert('thanks')
+    alert('thanks');
   }
   console.log(tired);
 }
-tired();
+// tired();
 
 function Travel() {
 
@@ -68,12 +68,12 @@ function Travel() {
   } else if (traval.toLowerCase() === 'no' || traval.toLowerCase() === 'n') {
     alert('thats wrong')
   } else {
-    alert('thanks')
+    alert('thanks');
   }
   console.log(traval);
 }
 
-Travel();
+// Travel();
 
 
 function favNum() {
@@ -97,38 +97,66 @@ function favNum() {
   alert(favNum)
 }
 
-favNum();
+// favNum();
 
-let prands = ['gucci', 'zara', 'chanel', 'coach', 'Christian Dior']
+// let prands = ['gucci', 'zara', 'chanel', 'coach', 'Christian Dior']
 
-function prand( prands) {
-  //let prands = ['gucci', 'zara', 'chanel', 'coach', 'Christian Dior']
-  let found = false;
-  for (let x = 0; x < 6; x++) {
-    let favPrand = prompt('what is my favourite prand');
-    for (let y = 0; y < prands.length; y++) {
-      if (favPrand.toLowerCase() === prands[y]) {
-        alert('thats right');
-        console.log(favPrand);
-        found = true;
-        score++;
-        break;
-      }
-    }
-    if (found === true) {
-      break;
-    }
-  }
+let prand = ['gucci', 'zara', 'chanel', 'coach', 'Christian Dior'];
+let found=false;
+let myprand;
+function prands(){
+    for(let i=1;i<=6;i++){ 
+         myprand=prompt('what your faverat prand?');
+    for(let j=0; j < prand.length; j++){ 
+           if(myprand===prand[j]){ 
+                    found=true;   
+                         alert('you win');  
+                                   
+                                   break; 
+                                  }  
+                                  }    if(found===true){  
+                                        alert('the right answer  '+prand);   
+                                           break; 
+                                             }  }}
 
+// function prand() {
+  // let prand = ['gucci', 'zara', 'chanel', 'coach', 'Christian Dior']
+//   let found = false;
+//   for (let x = 0; x < 6; x++) {
+//     let favPrand = prompt('what is my favourite prand');
+//     for (let y = 0; y < prand.length; y++) {
+//       if (favPrand === prand[y]) {
+//         alert('thats right');
+//         console.log(favPrand);
+//         found = true;
+//         score++;
+//         break;
+//       }
+//     }
+//     if (found === true) {
+//       break;
+//     }
+//   }
+ 
+// }
+function Name(){
   let yourName = prompt('what your name?');
-  alert(`welcome ${yourName} in my page`);
-
+  alert(`welcome ${yourName} in my page your scores ${score}`);
   alert(yourName);
 
-  document.write(prand);
-  alert(`your scores ${score}`);
-
-  return prand ;
-
 }
-prand();
+aboutme();
+age();
+movie();
+tired();
+Travel();
+favNum();
+prands();
+Name();
+
+  // document.write(prand);
+  
+
+  
+
+
